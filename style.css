@@ -1,0 +1,12 @@
+body {
+    background-color: #eeedff;
+}
+
+td {border: 1px gray solid;
+vertical-align: middle;
+text-align: center;
+padding: 3px 0px;
+background-color: aliceblue;}
+table {border-collapse: collapse;
+    width: 100%;
+border: 1px gray solid;}
