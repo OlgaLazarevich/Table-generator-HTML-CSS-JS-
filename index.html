@@ -2,34 +2,34 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <title>Document</title>
-   <script src="js/index.js"></script>
-   <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<title>Table-generator-HTML-CSS-JS</title>
+<script src="js/index.js"></script>
+<link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<a href="#" onclick="tableCol ()">Кнопка</a>
+<form name="test" method="post" action="input1.php">
+  <p><b>Ваше имя:</b><br>
+   <input id='col' type="text" size="50" value="d" id="col" max="10">
+   
+  </p>
+ 
+  <p><input type="button" value="Отправить" id="submit">
+   <input type="reset" value="Очистить"></p>
+ </form>
 
-<table >
-   <tbody id="table">
-    <tr id="t">
-<!--      <td>e</td>-->
-    </tr>
+<a href="#" onclick="createTableColRow()">Кнопка</a>
+<a href="#" onclick="deleteTableColRow()">Удалить</a>
+
+<table>
+    <tbody id="table">
+        
     </tbody>
 </table>
 
-<div >Hello</div>
- 
- <ol >
-  <li>0</li>
-  <li>1</li>
-  <li>2</li>
-</ol>
- 
- 
-  <script src="js/index.js"></script>
+<script src="js/index.js"></script>
 
 </body>
 
