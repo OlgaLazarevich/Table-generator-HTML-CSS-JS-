@@ -11,22 +11,24 @@
 <body>
 
 <form name="test" method="post" action="input1.php">
-  <p><b>Ваше имя:</b><br>
-   <input id='col' type="text" size="50" value="d" id="col" max="10">
-   
-  </p>
- 
-  <p><input type="button" value="Отправить" id="submit">
-   <input type="reset" value="Очистить"></p>
- </form>
+    <p><b>Col number:</b><br>
+        <input type="text" size="50" value="" id="col" max="10">
+    </p>
 
-<a href="#" onclick="createTableColRow()">Кнопка</a>
-<a href="#" onclick="deleteTableColRow()">Удалить</a>
+    <p><b>Row number:</b><br>
+        <input type="text" size="50" value="" id="row" max="10">
+    </p>
+
+    <p>
+        <input type="button" value="Generate" onclick="createTableColRow()">
+        <input type="reset" value="Reset" onclick="createTableColRow()">
+        <input type="reset" value="Delete table" onclick="deleteTableColRow()">
+    </p>
+</form>
+
 
 <table>
-    <tbody id="table">
-        
-    </tbody>
+    <tbody id="table"></tbody>
 </table>
 
 <script src="js/index.js"></script>
