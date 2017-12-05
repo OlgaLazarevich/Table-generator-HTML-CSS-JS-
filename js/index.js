@@ -28,22 +28,29 @@ function createTableColRow (){
         
     table.insertBefore(newRow, t.children[0]);
         }
-    console.log(t.children[0]);
-    console.log(document.querySelectorAll('tr > td')[2].parentElement);
-    console.log(document.querySelectorAll('tr > td')[2].parentElement.parentElement);
-    console.log(document.querySelectorAll('tr > td')[2].parentElement.parentElement.parentElement);
-    console.log(document.querySelectorAll('tr > td')[2].parentElement.parentElement.parentElement.parentElement);
-    console.log(document.querySelectorAll('tr > td')[2].parentElement.parentElement.parentElement.parentElement.parentElement);
-    console.log(document.querySelectorAll('tr > td')[2].parentElement.parentElement.parentElement.parentElement.parentElement.parentElement);
     
-    console.log(document.getElementById('col').value);
-    console.log(document.getElementById('row').value);
+    var el = document.getElementsByTagName('td');
     
+    
+    
+    function addClassSelectedCols (e) {
+        e.currentTarget.classList.add("selected");
+    }
+    
+    for(var i = 0; i < el.length; i++){
+      el[i].addEventListener('click', addClassSelectedCols, false);
+    }
+
 }
 
 
-
-
-
+function combineSelectedCols() {
+    
+    var rows = document.getElementsByTagName('tr');
+    
+    var selectedCols = document.getElementsByTagName('tr')[0].getElementsByTagName('td')[0].className;
+    
+    console.log (rows, selectedCols);
+}
 
 

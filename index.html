@@ -11,18 +11,19 @@
 <body>
 
 <form name="test" method="post" action="input1.php">
-    <p><b>Col number:</b><br>
-        <input type="text" size="50" value="" id="col" max="10">
+    <p class="text"><b>Col number:</b><br>
+        <input type="text"  value="3" id="col" max="10">
     </p>
 
-    <p><b>Row number:</b><br>
-        <input type="text" size="50" value="" id="row" max="10">
+    <p class="text"><b>Row number:</b><br>
+        <input type="text"  value="3" id="row" max="10">
     </p>
 
     <p>
-        <input type="button" value="Generate" onclick="createTableColRow()">
-        <input type="reset" value="Reset" onclick="createTableColRow()">
-        <input type="reset" value="Delete table" onclick="deleteTableColRow()">
+        <input class='button' type="button" value="Generate" onclick="createTableColRow()" id='f'>
+        <input class='button' type="reset" value="Reset" onclick="createTableColRow()">
+        <input class='button' type="button" value="Delete table" onclick="deleteTableColRow()">
+        <input class='button' type="button" value="Combine" onclick="combineSelectedCols()">
     </p>
 </form>
 
@@ -30,8 +31,9 @@
 <table>
     <tbody id="table"></tbody>
 </table>
-
 <script src="js/index.js"></script>
+
+
 
 </body>
 
