@@ -9,24 +9,24 @@
 </head>
 
 <body>
+<div class="wrapper">
+    <form name="test" method="post" action="input1.php">
+        <p class="text"><b>Col number:</b><br>
+            <input type="text" value="3" id="col" max="10">
+        </p>
 
-<form name="test" method="post" action="input1.php">
-    <p class="text"><b>Col number:</b><br>
-        <input type="text"  value="3" id="col" max="10">
-    </p>
+        <p class="text"><b>Row number:</b><br>
+            <input type="text" value="3" id="row" max="10">
+        </p>
 
-    <p class="text"><b>Row number:</b><br>
-        <input type="text"  value="3" id="row" max="10">
-    </p>
-
-    <p>
-        <input class='button' type="button" value="Generate" onclick="createTableColRow()" id='f'>
-        <input class='button' type="reset" value="Reset" onclick="createTableColRow()">
-        <input class='button' type="button" value="Delete table" onclick="deleteTableColRow()">
-        <input class='button' type="button" value="Combine" onclick="combineSelectedCols()">
-    </p>
-</form>
-
+        <p>
+            <input class='button' type="button" value="Generate" onclick="createTableColRow()" id='f'>
+            <input class='button' type="reset" value="Reset" onclick="createTableColRow()">
+            <input class='button' type="button" value="Delete table" onclick="deleteTableColRow()">
+            <input class='button' type="button" value="Combine" onclick="combineSelectedCols()">
+        </p>
+    </form>
+</div>
 
 <table>
     <tbody id="table"></tbody>

@@ -50,7 +50,18 @@ function combineSelectedCols() {
     
     var selectedCols = document.getElementsByTagName('tr')[0].getElementsByTagName('td')[0].className;
     
-    console.log (rows, selectedCols);
+    rows[0].innerHTML = "<td colspan='2' onclick='addClassSelectedCols()'>1</td> <td colspan='1'>1</td>";
+    
+     var t = document.getElementsByTagName('td')[1];
+    
+    t.remove()
+     
+    console.log (rows[0], selectedCols, t);
+    
+    for (var prop in rows[0]) {
+  console.log("obj." + prop + " = " + rows.children[prop]);
+}
+    
 }
 
 
