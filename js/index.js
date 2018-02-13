@@ -46,22 +46,43 @@ function createTableColRow (){
 
 function combineSelectedCols() {
     
-    var rows = document.getElementsByTagName('tr');
     
-    var selectedCols = document.getElementsByTagName('tr')[0].getElementsByTagName('td')[0].className;
+    var trSel = document.getElementsByTagName('tr');
+    var td_Sel = trSel[0].getElementsByClassName('selected');
+    var lenSel = td_Sel.length - 1;
     
-    rows[0].innerHTML = "<td colspan='2' onclick='addClassSelectedCols()'>1</td> <td colspan='1'>1</td>";
+    for (let a = 0; a < document.getElementsByTagName('tr').length ; a++){ 
+        
+        if (!trSel[a].getElementsByClassName('selected')[0]) {
+             }
+        else { 
+            for (var i = 1, ii = 1, sLen = trSel[a].getElementsByClassName('selected').length;  i < sLen ; i++, ii++){
+            console.log ('внутренний', trSel[a].getElementsByClassName('selected')[0], sLen);
+                trSel[a].getElementsByClassName('selected')[1].remove();
+                
+            }
+            trSel[a].getElementsByClassName('selected')[0].setAttribute('colspan', sLen);
+            trSel[a].getElementsByClassName('selected')[0].style.background = "#b7b3ed";
+        };
+        
+        console.log ('внешний' )
+        
+        
+        
+        
+
+        
+        
+    }
     
-     var t = document.getElementsByTagName('td')[1];
+
     
-    t.remove()
-     
-    console.log (rows[0], selectedCols, t);
     
-    for (var prop in rows[0]) {
-  console.log("obj." + prop + " = " + rows.children[prop]);
+    
+    console.log(trSel, td_Sel.length);
+    
 }
     
-}
+
 
 
